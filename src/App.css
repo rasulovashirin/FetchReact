@@ -1,30 +1,30 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-  }
+}
 
-  *,
-  *::before,
-  *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
-  }
+}
 
-  body {
+body {
     padding: 0;
-    margin: 0;
-    font-family: "Arial", sans-serif;
+    margin: -45px;
+    font-family:"Poppins", "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     background-color: #fff;
     color: #222;
-  }
+}
 
-  img {
+img {
     max-width: 100%;
     height: auto;
-  }
+}
 
-  .visually-hidden {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -33,12 +33,77 @@ html {
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 
-  .container {
-    max-width: 1250px;
-    padding-left: 25px;
-    padding-right: 25px;
+.container {
+    max-width: 1140px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-  }
+}
+.post-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.post-link {
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color:#333;
+}
+.post-link:hover {
+    opacity: 0.6;
+}
+.post-link:active {
+    opacity: 0.8;
+}
+.header {
+    background-color: #333;
+}
+.header-title {
+    font-family: 'Niconne', cursive;
+    font-size: 50px;
+    color:#fff;
+    font-weight: normal;
+}
+
+.post-title {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.post-text {
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.post-number {
+    display: inline-block;
+    margin: 0;
+    font-weight: normal;
+    padding: 10px;
+    background-color: rgb(253, 228, 83);
+    border-radius: 3px;
+}
+.post-choose {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    right: 0;
+    display: inline-block;
+    font-weight: normal;
+    padding: 10px;
+    background-color: rgb(253, 228, 83);
+    border-radius: 3px;
+    margin: 0;
+    font-size: 16px;
+}
+.back-btn {
+   padding:10px;
+   background-color: #f4f4f4;
+   text-decoration: none;
+   text-transform: uppercase;
+   color:#333;
+   border-radius: 5px;
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function Home () {
 
@@ -23,24 +24,28 @@ function Home () {
 
       return(
           <>
-            <div className="container">
+            <div>
               { data.loading && <>Loading...</>}
               { data.error && <>{data.error}</>}
               { !data.loading && <>
-                <ol>
+                <div className="container">
                   {
                     data.data.map(post => {
 
-                      return <li key={post.id}>
-                        <a href={'/post/' + post.id}>{post.title}</a>
-                      </li>
+                      // return <li key={post.id}>
+                      //   <a href={'/post/' + post.id}>{post.title}</a>
+                      // </li>
+                      return(
+                        <Link className="post-link" to={'/post/' + post.id}> {post.title}</Link>
+                      )
                     })
                   }
-                </ol>
+                </div>
 
               </>
               }
             </div>
+            <h3 className="post-choose">Choose any of this posts</h3>
           </>
         )
 }

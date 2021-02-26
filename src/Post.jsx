@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 function Post () {
  const [data, setData]= useState({
@@ -25,17 +25,20 @@ function Post () {
 
     return (
       <>
-      <h3>Post # {postnumber}</h3>
-      <div>
+      <div className="container">
+      <div className="post-wrapper">
+      <h3 className="post-number">Post # {postnumber}</h3>
+      <Link to="/" className="back-btn">Back</Link>
+      </div>
             { data.loading && <>Loading...</>}
             { data.error && <>{data.error}</>}
             { !data.loading && <>
-               <div>
+               <h4 className="post-title">
                 {data.data.title}
-               </div>
-               <div>
+               </h4>
+               <p className="post-text">
                 {data.data.body}
-               </div>
+               </p>
             </>}
       </div>
       </>
